@@ -32,6 +32,9 @@
           <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">登录</a></li>
           <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">注册</a></li>
         @else
+          <li class="nav-item">
+            <a href="{{route('topics.create')}}" class="nav-link mt-1 mr-3 font-weight-bold"><i class="fa fa-plus"></i></a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                aria-haspopup="true" aria-expanded="false">
@@ -46,7 +49,7 @@
                   class="far fa-edit mr-2"></i>编辑资料</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" id="logout" href="#">
-                <form action="{{ route('logout') }}" method="POST" onsubmit="return confirm('确定推出？')">
+                <form action="{{ route('logout') }}" method="POST" onsubmit="return confirm('确定退出？')">
                   {{ csrf_field() }}
                   <button class="btn btn-block btn-danger" type="submit" name="button">退出</button>
                 </form>
