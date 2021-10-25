@@ -68,6 +68,7 @@
   <script type="text/javascript" src="{{ asset('js/uploader.js') }}"></script>
   <script type="text/javascript" src="{{ asset('js/simditor.js') }}"></script>
 
+
   <script>
     $(document).ready(function () {
       var editor = new Simditor({
@@ -85,6 +86,6 @@
       });
     });
   </script>
-@stop
 
+@stop
 @endsection
