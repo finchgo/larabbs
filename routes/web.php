@@ -31,3 +31,5 @@ Route::post('upload_image', [TopicsController::class, 'uploadImage'])->name('top
 Route::get('topics/{topic}/{slug?}', [TopicsController::class, 'show'])->name('topics.show');
 
 Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]);
+
+Route::resource('notifications', 'NotificationsController', ['only' => ['index']]);
